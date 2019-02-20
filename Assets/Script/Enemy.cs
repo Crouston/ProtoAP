@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        health = 1;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +23,10 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        health -= 1;
-        Destroy(collision.gameObject);
+        if (collision.tag == "Bullet")
+        {
+            health -= 1;
+            Destroy(collision.gameObject);
+        }
     }
 }

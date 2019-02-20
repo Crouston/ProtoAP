@@ -15,26 +15,34 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float x = transform.position.x;
-        float y = transform.position.y;
-        float xE = enemy.transform.position.x;
-        float yE = enemy.transform.position.y;
+        if (enemy != null)
+        {
+            float x = transform.position.x;
+            float y = transform.position.y;
+            float xE = enemy.transform.position.x;
+            float yE = enemy.transform.position.y;
 
-        if (x <= xE && y <= yE)
-        {
-            transform.Translate((Vector3.up + Vector3.right)*Time.deltaTime*speed);
+            if (x <= xE && y <= yE)
+            {
+                transform.Translate((Vector3.up + Vector3.right) * Time.deltaTime * speed);
+            }
+            else if (x <= xE && y >= yE)
+            {
+                transform.Translate((Vector3.down + Vector3.right) * Time.deltaTime * speed);
+            }
+            else if (x >= xE && y <= yE)
+            {
+                transform.Translate((Vector3.up + Vector3.left) * Time.deltaTime * speed);
+            }
+            else if (x >= xE && y >= yE)
+            {
+                transform.Translate((Vector3.down + Vector3.left) * Time.deltaTime * speed);
+            }
         }
-        else if (x <= xE && y >= yE)
+        else
         {
-            transform.Translate((Vector3.down + Vector3.right) * Time.deltaTime * speed);
+            Destroy(gameObject);
         }
-        else if (x >= xE && y <= yE)
-        {
-            transform.Translate((Vector3.up + Vector3.left) * Time.deltaTime * speed);
-        }
-        else if (x >= xE && y >= yE)
-        {
-            transform.Translate((Vector3.down + Vector3.left) * Time.deltaTime * speed);
-        }
+       
     }
 }

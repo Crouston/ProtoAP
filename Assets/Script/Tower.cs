@@ -12,7 +12,7 @@ public class Tower : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (enemy == null)
+        if (enemy == null && collision.tag == "Enemy")
         {
             enemy = collision.gameObject;
         }
