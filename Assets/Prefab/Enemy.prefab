@@ -100,10 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  waypoints:
-  - {fileID: 4278347123645380, guid: e8fc33654bf78e64e930943da5b99f95, type: 2}
-  - {fileID: 4436087860319626, guid: 60d0aaa1a8f16b94f8fa4f78d25750d2, type: 2}
-  moveSpeed: 25
+  waypoints: {fileID: 4278347123645380, guid: e8fc33654bf78e64e930943da5b99f95, type: 2}
+  moveSpeed: 5
 --- !u!212 &212194761260357326
 SpriteRenderer:
   m_ObjectHideFlags: 1
