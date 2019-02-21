@@ -17,27 +17,7 @@ public class Bullet : MonoBehaviour {
 	void Update () {
         if (enemy != null)
         {
-            float x = transform.position.x;
-            float y = transform.position.y;
-            float xE = enemy.transform.position.x;
-            float yE = enemy.transform.position.y;
-
-            if (x <= xE && y <= yE)
-            {
-                transform.Translate((Vector3.up + Vector3.right) * Time.deltaTime * speed);
-            }
-            else if (x <= xE && y >= yE)
-            {
-                transform.Translate((Vector3.down + Vector3.right) * Time.deltaTime * speed);
-            }
-            else if (x >= xE && y <= yE)
-            {
-                transform.Translate((Vector3.up + Vector3.left) * Time.deltaTime * speed);
-            }
-            else if (x >= xE && y >= yE)
-            {
-                transform.Translate((Vector3.down + Vector3.left) * Time.deltaTime * speed);
-            }
+            transform.position = Vector2.MoveTowards(transform.position, enemy.transform.position,speed*Time.deltaTime);
         }
         else
         {

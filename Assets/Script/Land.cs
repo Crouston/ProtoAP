@@ -13,9 +13,9 @@ public class Land : MonoBehaviour {
         isEmpty = true;
     }
 
-    private void OnMouseOver()
+    private void OnMouseDown()
     {
-        if(Input.GetMouseButtonDown(0) && isEmpty)
+        if(isEmpty)
         {
             Instantiate(tower, transform.position, Quaternion.identity,gameObject.transform);
             isEmpty = false;
