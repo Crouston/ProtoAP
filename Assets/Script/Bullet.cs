@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public GameObject enemy;
 
+
     private float speed;
 
 	// Use this for initialization

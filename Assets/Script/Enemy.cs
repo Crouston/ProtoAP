@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    
-    
+    private bool isHitSlow= false;
+    private float timer;
 
     public int health;
 
@@ -23,6 +23,10 @@ public class Enemy : MonoBehaviour {
         if(health <= 0)
         {
             Destroy(this.gameObject);
+        }
+        if (isHitSlow == true)
+        {
+            slowDelay();
         }
 	}
     private void Move()
@@ -43,5 +47,23 @@ public class Enemy : MonoBehaviour {
         {
             health = 0;
         }
+        if (collision.tag == "SlowBullet")
+        {
+            isHitSlow = true;
+        }
+    }
+    private void slowDelay()
+    {
+        timer += Time.deltaTime;
+        if (timer < 2)
+        {
+            moveSpeed = 5f;
+        }
+        else
+        {
+            moveSpeed = 15f;
+            isHitSlow = false;
+        }
+
     }
 }

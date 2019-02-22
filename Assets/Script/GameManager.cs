@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject enemy;
 
     [SerializeField]private Vector3 spawnPoint;
-
+    //int counter = 0;
     private float spawnCooldown;
 
 	// Use this for initialization
@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour {
         {
             Instantiate(enemy,spawnPoint,Quaternion.identity);
             spawnCooldown = 2f;
+            //counter++;
         }
+        //if (counter >= 3)
+        //    spawnCooldown = 15f;
 	}
 }

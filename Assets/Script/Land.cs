@@ -5,7 +5,8 @@ using UnityEngine;
 public class Land : MonoBehaviour {
 
     [SerializeField] private GameObject tower;
-
+    [SerializeField]
+    private GameObject wizard;
     public bool isEmpty;
 
     private void Start()
@@ -13,12 +14,16 @@ public class Land : MonoBehaviour {
         isEmpty = true;
     }
 
+    
     private void OnMouseDown()
     {
         if(isEmpty)
         {
+            Instantiate(wizard, transform.position, Quaternion.identity, gameObject.transform);
+
             Instantiate(tower, transform.position, Quaternion.identity,gameObject.transform);
             isEmpty = false;
         }
     }
+    
 }
