@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
     private bool isHitSlow= false;
     private float timer;
 
+
     public int health;
 
     // Array of waypoints to walk from one to the next one
@@ -26,15 +27,15 @@ public class Enemy : MonoBehaviour {
         }
         if (isHitSlow == true)
         {
-            slowDelay();
+            moveSpeed = 5;
         }
+        else moveSpeed = 15;
 	}
     private void Move()
     {
         transform.position = Vector2.MoveTowards(transform.position,
         waypoints.transform.position,
         moveSpeed * Time.deltaTime);
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,20 +51,17 @@ public class Enemy : MonoBehaviour {
         if (collision.tag == "SlowBullet")
         {
             isHitSlow = true;
+   
         }
+        
+        
     }
-    private void slowDelay()
+    private void OnTriggerExit2D(Collider2D collid)
     {
-        timer += Time.deltaTime;
-        if (timer < 2)
+        if (collid.tag == "SlowBullet")
         {
-            moveSpeed = 5f;
-        }
-        else
-        {
-            moveSpeed = 15f;
             isHitSlow = false;
         }
-
     }
+   
 }
