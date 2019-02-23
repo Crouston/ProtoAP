@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Land : MonoBehaviour {
-
+    [SerializeField]
+    private GameObject text;
     [SerializeField] private GameObject tower;
     [SerializeField]
     private GameObject wizard;
@@ -23,7 +24,9 @@ public class Land : MonoBehaviour {
 
             Instantiate(tower, transform.position, Quaternion.identity,gameObject.transform);
             isEmpty = false;
+            text.SetActive(true);          //  Instantiate(text, transform.position, Quaternion.identity, gameObject.transform);
         }
+
     }
     
 }

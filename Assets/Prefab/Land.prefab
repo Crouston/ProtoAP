@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 1734864238440012, guid: 1ddd3ff10248bbe4f88649c65612030d, type: 2}
+  wizard: {fileID: 1951400800708330, guid: a9f6608a2ae61584ea847ce4cd42c043, type: 2}
   isEmpty: 0
 --- !u!212 &212824474367064112
 SpriteRenderer:
