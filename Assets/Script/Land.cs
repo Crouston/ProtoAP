@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Land : MonoBehaviour {
     [SerializeField]
-    private GameObject text;
+    private GameObject towerName;
     [SerializeField] private GameObject tower;
     [SerializeField]
     private GameObject wizard;
@@ -20,11 +20,10 @@ public class Land : MonoBehaviour {
     {
         if(isEmpty)
         {
-            Instantiate(wizard, transform.position, Quaternion.identity, gameObject.transform);
+            //Instantiate(wizard, transform.position, Quaternion.identity, gameObject.transform);
 
             Instantiate(tower, transform.position, Quaternion.identity,gameObject.transform);
-            isEmpty = false;
-            text.SetActive(true);          //  Instantiate(text, transform.position, Quaternion.identity, gameObject.transform);
+            isEmpty = false;          
         }
 
     }

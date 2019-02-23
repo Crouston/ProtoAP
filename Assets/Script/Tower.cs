@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour {
 
+    [SerializeField]private GameObject towerName;
+
+    [SerializeField] private GameObject nameButton;
+
     [SerializeField] private GameObject bullet;
 
     [SerializeField]private GameObject enemy = null;
+
+    
 
     private float attackCooldown;
 
@@ -21,6 +27,8 @@ public class Tower : MonoBehaviour {
     private void Start()
     {
         attackCooldown = 0f;
+        nameButton.GetComponent<NameToggler>().towerName = Instantiate(towerName, transform.position + new Vector3(0, 10), Quaternion.identity, transform);
+        Instantiate(nameButton, transform.position, Quaternion.identity, transform);
     }
 
     private void Update()
@@ -32,5 +40,7 @@ public class Tower : MonoBehaviour {
             Instantiate(bullet, transform.position, Quaternion.identity);
             attackCooldown = 1f;
         }
+
     }
+   
 }
