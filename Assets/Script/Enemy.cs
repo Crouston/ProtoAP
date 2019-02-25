@@ -51,7 +51,11 @@ public class Enemy : MonoBehaviour {
         if (collision.tag == "SlowBullet")
         {
             isHitSlow = true;
-   
+        }
+        if (collision.tag == "AoEBullet")
+        {
+            health -= 1;
+            Destroy(collision.gameObject);
         }
         
         

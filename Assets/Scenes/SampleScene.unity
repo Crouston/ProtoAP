@@ -163,6 +163,12 @@ Prefab:
       propertyPath: text
       value: 
       objectReference: {fileID: 1601753103}
+    - target: {fileID: 114319789365168278, guid: 0eebe1a478fc0c24f99bd4f7d53c80f8,
+        type: 2}
+      propertyPath: aoetower
+      value: 
+      objectReference: {fileID: 1308360542714058, guid: 2fefe4b98d24139478706d765b1629f3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eebe1a478fc0c24f99bd4f7d53c80f8, type: 2}
   m_IsPrefabAsset: 0
@@ -744,6 +750,12 @@ Prefab:
       propertyPath: m_Name
       value: Land
       objectReference: {fileID: 0}
+    - target: {fileID: 114319789365168278, guid: 0eebe1a478fc0c24f99bd4f7d53c80f8,
+        type: 2}
+      propertyPath: aoetower
+      value: 
+      objectReference: {fileID: 1308360542714058, guid: 2fefe4b98d24139478706d765b1629f3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eebe1a478fc0c24f99bd4f7d53c80f8, type: 2}
   m_IsPrefabAsset: 0

@@ -6,6 +6,7 @@ public class Land : MonoBehaviour {
     //[SerializeField]
     //private GameObject towerName;
     [SerializeField] private GameObject tower;
+    public GameObject aoetower;
     [SerializeField]
     private GameObject wizard;
     public bool isEmpty;
@@ -21,7 +22,7 @@ public class Land : MonoBehaviour {
         if(isEmpty)
         {
             //Instantiate(wizard, transform.position, Quaternion.identity, gameObject.transform);
-
+            Instantiate(aoetower, transform.position, Quaternion.identity, gameObject.transform);
             Instantiate(tower, transform.position, Quaternion.identity,gameObject.transform);
             isEmpty = false;          
         }
