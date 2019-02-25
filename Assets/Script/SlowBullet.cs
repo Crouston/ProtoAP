@@ -19,7 +19,7 @@ public class SlowBullet : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //Utk chase target di posisi mana dia pas terkena scanning 
+        //Spawn di lokasi target 
         transform.position = target;
         //Utk timer bullet menghilang jika lebih dari 6 detik
         timer += Time.deltaTime;

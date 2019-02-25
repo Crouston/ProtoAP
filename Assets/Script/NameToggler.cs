@@ -15,20 +15,20 @@ public class NameToggler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
     }
 
     private void OnMouseDown()
     {
         if (!clicked)
         {
-            towerName.SetActive(false);
             clicked = true;
+            towerName.SetActive(false);
         }
         else if (clicked)
         {
-            towerName.SetActive(true);
             clicked = false;
+            towerName.SetActive(true);
         }
     }
 }

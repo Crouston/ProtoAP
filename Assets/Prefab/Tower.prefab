@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff04ed32123fa540b9679d49c0800bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: {fileID: 1873113078397562, guid: e71c68a1c65582845ad70967dc420cd2, type: 2}
+  nameButton: {fileID: 1952836419796870, guid: 4adfc2296de67fa4f90ef403cb78d262, type: 2}
   bullet: {fileID: 1288232051219648, guid: 7c73810774fda234fa5779a0d12dcde1, type: 2}
   enemy: {fileID: 0}
 --- !u!212 &212354353067667372
