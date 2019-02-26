@@ -17,12 +17,12 @@ public class Land : MonoBehaviour {
     }
 
     
-    private void OnMouseDown()
+    public void CreateTower()
     {
         if(isEmpty)
         {
             //Instantiate(wizard, transform.position, Quaternion.identity, gameObject.transform);
-            Instantiate(aoetower, transform.position, Quaternion.identity, gameObject.transform);
+            //Instantiate(aoetower, transform.position, Quaternion.identity, gameObject.transform);
             Instantiate(tower, transform.position, Quaternion.identity,gameObject.transform);
             isEmpty = false;          
         }

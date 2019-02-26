@@ -18,7 +18,7 @@ public class NameToggler : MonoBehaviour {
         
     }
 
-    private void OnMouseDown()
+    public void NameToggle()
     {
         if (!clicked)
         {
