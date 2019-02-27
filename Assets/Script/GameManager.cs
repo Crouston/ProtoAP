@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject enemy;
 
     [SerializeField]private Vector3 spawnPoint;
+
+    public GameObject selectedWizard;
     //int counter = 0;
     private float spawnCooldown;
 
