@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WizardTower : MonoBehaviour {
-
+    [SerializeField]
+    private GameObject nameButton;
     [SerializeField]
     private GameObject bullet;
-
+    [SerializeField]
+    private GameObject towerName;
     [SerializeField]
     private GameObject enemy;
 
@@ -23,6 +25,8 @@ public class WizardTower : MonoBehaviour {
     private void Start()
     {
         attackCooldown = 3f;
+        nameButton.GetComponent<NameToggler>().towerName = Instantiate(towerName, transform.position + new Vector3(0, 10), Quaternion.identity, transform);
+        Instantiate(nameButton, transform.position, Quaternion.identity, transform);
     }
 
     private void Update()

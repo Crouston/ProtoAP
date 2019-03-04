@@ -52,7 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dfcd057a45dc1b41b43343fc5285d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameButton: {fileID: 1952836419796870, guid: 4adfc2296de67fa4f90ef403cb78d262, type: 2}
   bullet: {fileID: 1208228849752644, guid: a1c3bcb5d618e9b44a0c046d45843d48, type: 2}
+  towerName: {fileID: 1114417132164762, guid: 0e91b87611de3804989dc4c20d880004, type: 2}
   enemy: {fileID: 1383168971096780, guid: edb1cde1233fc37499ac98cffb966866, type: 2}
 --- !u!212 &212177822632418680
 SpriteRenderer:
