@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     public GameObject enemy;
+    public float damage;
 
 
     private float speed;

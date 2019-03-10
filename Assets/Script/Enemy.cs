@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     private float timer;
 
 
-    public int health;
+    public float health;
 
     // Array of waypoints to walk from one to the next one
     public Transform waypoints;
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour {
     {
         if (collision.tag == "Bullet")
         {
-            health -= 1;
+            health -= collision.GetComponent<Bullet>().damage;
             Destroy(collision.gameObject);
         }
         if(collision.tag == "End")
@@ -50,12 +50,13 @@ public class Enemy : MonoBehaviour {
         }
         if (collision.tag == "SlowBullet")
         {
+            health -= collision.GetComponent<Bullet>().damage;
             isHitSlow = true;
         }
         if (collision.tag == "AoEBullet")
         {
+            health -= collision.GetComponent<AoE_Bullet>().damage;
             health -= 1;
-            Destroy(collision.gameObject);
         }
         
         

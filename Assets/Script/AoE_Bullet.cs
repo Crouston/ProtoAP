@@ -10,11 +10,13 @@ public class AoE_Bullet : MonoBehaviour {
     private float timer;
     [SerializeField]
     private int vanishTime;
+    
+    public float damage;
     // Use this for initialization
     void Start()
     {
         timer = 0;
-        enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         target = new Vector2(enemy.position.x, enemy.position.y);
         //speed = 10f;
         transform.position = target;

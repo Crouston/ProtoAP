@@ -12,10 +12,10 @@ public class Tower : MonoBehaviour {
 
     [SerializeField]private GameObject enemy = null;
 
+    public float damage;
     
-
-    private float attackCooldown;
-
+    public float attackCooldown;
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (enemy == null && collision.tag == "Enemy")

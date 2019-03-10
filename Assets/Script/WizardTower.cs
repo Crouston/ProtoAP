@@ -11,8 +11,9 @@ public class WizardTower : MonoBehaviour {
     private GameObject towerName;
     [SerializeField]
     private GameObject enemy;
+    public float damage;
 
-    private float attackCooldown;
+    public float attackCooldown;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -34,7 +35,15 @@ public class WizardTower : MonoBehaviour {
         attackCooldown -= Time.deltaTime;
         if (enemy != null && attackCooldown <= 0)
         {
-            //bullet.GetComponent<SlowBullet>().enemy = enemy;
+            if (bullet.GetComponent<Bullet>() != null)
+            {
+                bullet.GetComponent<Bullet>().enemy = enemy;
+            }
+            else
+            {
+                bullet.GetComponent<SlowBullet>().enemy = enemy.transform;
+            }
+            bullet.GetComponent<Bullet>().damage = damage;
             Instantiate(bullet, transform.position, Quaternion.identity);
             attackCooldown = 3f;
         }

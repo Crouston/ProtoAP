@@ -15,7 +15,9 @@ public class AoE_Tower : MonoBehaviour {
     [SerializeField]
     private GameObject enemy;
 
-    private float attackCooldown;
+    public float damage;
+
+    public float attackCooldown;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -27,6 +29,7 @@ public class AoE_Tower : MonoBehaviour {
 
     private void Start()
     {
+        enemy = null;
         attackCooldown = 3f;
         nameButton.GetComponent<NameToggler>().towerName = Instantiate(towerName, transform.position + new Vector3(0, 10), Quaternion.identity, transform);
         Instantiate(nameButton, transform.position, Quaternion.identity, transform);
@@ -37,7 +40,8 @@ public class AoE_Tower : MonoBehaviour {
         attackCooldown -= Time.deltaTime;
         if (enemy != null && attackCooldown <= 0)
         {
-           // bullet.GetComponent<SlowBullet>().enemy = enemy;
+            bullet.GetComponent<AoE_Bullet>().enemy = enemy.transform;
+            bullet.GetComponent<AoE_Bullet>().damage = damage;
             Instantiate(bullet, transform.position, Quaternion.identity);
             attackCooldown = 3f;
         }

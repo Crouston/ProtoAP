@@ -11,7 +11,7 @@ public class SlowBullet : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         target = new Vector2(enemy.position.x, enemy.position.y);
         //speed = 10f;
     }
