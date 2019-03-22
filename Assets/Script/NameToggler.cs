@@ -6,7 +6,7 @@ public class NameToggler : MonoBehaviour {
 
     public bool clicked;
 
-    public GameObject towerName;
+    public GameObject towerName, upgradeButton;
 
     // Use this for initialization
     void Start () {
@@ -23,11 +23,15 @@ public class NameToggler : MonoBehaviour {
         if (!clicked)
         {
             clicked = true;
+            if(upgradeButton != null)
+                upgradeButton.SetActive(false);
             towerName.SetActive(false);
         }
         else if (clicked)
         {
             clicked = false;
+            if (upgradeButton != null)
+                upgradeButton.SetActive(true);
             towerName.SetActive(true);
         }
     }

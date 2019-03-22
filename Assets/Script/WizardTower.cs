@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WizardTower : MonoBehaviour {
     [SerializeField]
-    private GameObject nameButton;
+    private GameObject nameButton, upgradeButton;
     [SerializeField]
     private GameObject bullet;
     [SerializeField]
@@ -27,6 +27,8 @@ public class WizardTower : MonoBehaviour {
     {
         attackCooldown = 3f;
         nameButton.GetComponent<NameToggler>().towerName = Instantiate(towerName, transform.position + new Vector3(0, 10), Quaternion.identity, transform);
+        upgradeButton.GetComponent<UpgradeButton>().tower = gameObject;
+        nameButton.GetComponent<NameToggler>().upgradeButton = Instantiate(upgradeButton, transform.position + new Vector3(8, -8), Quaternion.identity, transform);
         Instantiate(nameButton, transform.position, Quaternion.identity, transform);
     }
 
@@ -38,10 +40,6 @@ public class WizardTower : MonoBehaviour {
             if (bullet.GetComponent<Bullet>() != null)
             {
                 bullet.GetComponent<Bullet>().enemy = enemy;
-            }
-            else
-            {
-                bullet.GetComponent<SlowBullet>().enemy = enemy.transform;
             }
             bullet.GetComponent<Bullet>().damage = damage;
             Instantiate(bullet, transform.position, Quaternion.identity);

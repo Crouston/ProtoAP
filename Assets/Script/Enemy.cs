@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour {
         }
         if (collision.tag == "SlowBullet")
         {
-            health -= collision.GetComponent<Bullet>().damage;
+            health -= collision.GetComponent<AoE_Bullet>().damage;
             isHitSlow = true;
         }
         if (collision.tag == "AoEBullet")
