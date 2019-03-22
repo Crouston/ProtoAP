@@ -92,6 +92,8 @@ MonoBehaviour:
   bullet: {fileID: 1917991206861058, guid: 98df5a59b4029e743bfd2af7af7068a4, type: 2}
   towerName: {fileID: 1050829537996474, guid: 3e359abb8777589438060e7c8c159151, type: 2}
   nameButton: {fileID: 1952836419796870, guid: 4adfc2296de67fa4f90ef403cb78d262, type: 2}
+  upgradeButton: {fileID: 1063191376758750, guid: 5437090df4a1d61449547e15b1bd4d1a,
+    type: 2}
   enemy: {fileID: 1383168971096780, guid: edb1cde1233fc37499ac98cffb966866, type: 2}
   damage: 2
   attackCooldown: 0
