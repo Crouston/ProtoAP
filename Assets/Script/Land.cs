@@ -9,7 +9,7 @@ public class Land : MonoBehaviour {
 
     private void Start()
     {
-        isEmpty = true;
+        isEmpty = true;        
     }
    
    
@@ -22,6 +22,13 @@ public class Land : MonoBehaviour {
             GameManager.FindObjectOfType<GameManager>().selectedWizard = null;
         }
 
+    }
+    public void LandRecover()
+    {
+        if(GetComponent<DemolishTower>().destroyed == true)
+        {
+            isEmpty = true;
+        }
     }
    
     
