@@ -14,7 +14,8 @@ public class AoE_Tower : MonoBehaviour {
 
     [SerializeField]
     private GameObject enemy;
-    
+
+    public int price;
 
     public float damage;
 

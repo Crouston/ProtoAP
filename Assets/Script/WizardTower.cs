@@ -11,6 +11,7 @@ public class WizardTower : MonoBehaviour {
     private GameObject towerName;
     [SerializeField]
     private GameObject enemy;
+    public int price;
     public float damage;
 
     public float attackCooldown;
