@@ -20,12 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4356468277523024}
   - component: {fileID: 212987911213973414}
-  - component: {fileID: 114831073580291246}
-  - component: {fileID: 58568511967350354}
-  - component: {fileID: 50538222072472388}
+  - component: {fileID: 114530347047808630}
   m_Layer: 0
   m_Name: AoE Bullet 1
-  m_TagString: AoEBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,42 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50538222072472388
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1455662514799258}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &58568511967350354
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1455662514799258}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &114831073580291246
+--- !u!114 &114530347047808630
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,12 +49,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455662514799258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e146c195d23774a800587f0061fb9f, type: 3}
+  m_Script: {fileID: 11500000, guid: fafa2d5bfe325bf468b89d496f3bdcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1917991206861058, guid: 98df5a59b4029e743bfd2af7af7068a4, type: 2}
   enemy: {fileID: 0}
-  vanishTime: 3
-  damage: 8
+  vanishTime: 0.5
+  damage: 2
 --- !u!212 &212987911213973414
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -128,7 +92,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0640a5fededc75f44a9107b9749ad3b0, type: 3}
-  m_Color: {r: 0.24528301, g: 0.0034709796, b: 0.0034709796, a: 1}
+  m_Color: {r: 0.5283019, g: 0, b: 0, a: 0.4745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

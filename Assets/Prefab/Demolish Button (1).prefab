@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
+  land: {fileID: 0}
 --- !u!114 &114873029006921592
 MonoBehaviour:
   m_ObjectHideFlags: 1
