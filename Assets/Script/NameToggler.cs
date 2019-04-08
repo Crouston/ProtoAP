@@ -10,8 +10,11 @@ public class NameToggler : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        clicked = false;
-	}
+        clicked = true;
+        upgradeButton.SetActive(false);
+        demolishButton.SetActive(false);
+        towerName.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {

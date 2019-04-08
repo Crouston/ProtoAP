@@ -23,6 +23,7 @@ public class Land : MonoBehaviour {
                     FindObjectOfType<GameManager>().money -= FindObjectOfType<GameManager>().selectedWizard.GetComponent<WizardTower>().price;
                 else
                     return;
+                FindObjectOfType<GameManager>().selectedWizard.GetComponent<WizardTower>().land = gameObject;
                 Instantiate(GameManager.FindObjectOfType<GameManager>().selectedWizard, transform.position, Quaternion.identity, transform);
                 isEmpty = false;
                 GameManager.FindObjectOfType<GameManager>().selectedWizard = null;
@@ -33,6 +34,7 @@ public class Land : MonoBehaviour {
                     FindObjectOfType<GameManager>().money -= FindObjectOfType<GameManager>().selectedWizard.GetComponent<AoE_Tower>().price;
                 else
                     return;
+                FindObjectOfType<GameManager>().selectedWizard.GetComponent<AoE_Tower>().land = gameObject;
                 Instantiate(GameManager.FindObjectOfType<GameManager>().selectedWizard, transform.position, Quaternion.identity, transform);
                 isEmpty = false;
                 GameManager.FindObjectOfType<GameManager>().selectedWizard = null;
