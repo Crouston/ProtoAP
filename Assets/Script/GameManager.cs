@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+
 
     [SerializeField] private GameObject enemy;
 
     [SerializeField]private Vector3 spawnPoint;
 
+    [SerializeField] private Text moneyText;
+
     public GameObject selectedWizard;
+
+    public int money;
     //int counter = 0;
     private float spawnCooldown;
 
@@ -19,6 +25,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        moneyText.text = "Money : " + money.ToString();
         spawnCooldown -= Time.deltaTime;
         if(spawnCooldown <= 0)
         {

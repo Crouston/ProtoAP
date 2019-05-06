@@ -7,6 +7,7 @@ public class Upgrade : MonoBehaviour {
     public float towerDamage;
     public float attackCooldown;
     private float level;
+    [SerializeField] private int price;
 
     private void Start()
     {
@@ -23,8 +24,14 @@ public class Upgrade : MonoBehaviour {
 
     public void Up()
     {
-        towerDamage += 1;
-        attackCooldown -= 0.5f;
-        level++;
+        if (FindObjectOfType<GameManager>().money >= price)
+        {
+            towerDamage += 1;
+            attackCooldown -= 0.5f;
+            level++;
+            FindObjectOfType<GameManager>().money -= price;
+            price += 10;
+        }
+
     }
 }
