@@ -3,13 +3,7 @@ guid: 9dfcd057a45dc1b41b43343fc5285d8e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - nameButton: {instanceID: 0}
-  - upgradeButton: {instanceID: 0}
-  - demolishButton: {instanceID: 0}
-  - bullet: {instanceID: 0}
-  - towerName: {instanceID: 0}
-  - enemy: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -7,10 +7,13 @@ public class Bullet : MonoBehaviour {
     public GameObject enemy;
     public float damage;
 
-    [SerializeField]
+
     private float speed;
 
-	
+	// Use this for initialization
+	void Start () {
+        speed = 10f;
+	}
 	
 	// Update is called once per frame
 	void Update () {

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   waypoints: {fileID: 4278347123645380, guid: e8fc33654bf78e64e930943da5b99f95, type: 2}
-  moveSpeed: 5
+  moveSpeed: 15
 --- !u!212 &212194761260357326
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2060136629
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d32eb0bec3512e549934346dba734c88, type: 3}
   m_Color: {r: 1, g: 0.07075471, b: 0.07075471, a: 1}

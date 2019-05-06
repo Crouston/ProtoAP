@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class WizardTower : MonoBehaviour {
     [SerializeField]
-    private GameObject nameButton, upgradeButton,demolishButton;
+    private GameObject nameButton, upgradeButton;
     [SerializeField]
     private GameObject bullet;
     [SerializeField]
     private GameObject towerName;
     [SerializeField]
     private GameObject enemy;
-    public int price;
     public float damage;
-
-    public GameObject land;
 
     public float attackCooldown;
 
@@ -26,19 +23,9 @@ public class WizardTower : MonoBehaviour {
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (enemy == collision.gameObject)
-        {
-            enemy = null;
-        }
-    }
-    
     private void Start()
     {
-        demolishButton.GetComponent<DemolishTower>().tower = gameObject;
-        demolishButton.GetComponent<DemolishTower>().land = land;
-        nameButton.GetComponent<NameToggler>().demolishButton = Instantiate(demolishButton, transform.position + new Vector3(-8, -8), Quaternion.identity, transform);
+        attackCooldown = 3f;
         nameButton.GetComponent<NameToggler>().towerName = Instantiate(towerName, transform.position + new Vector3(0, 10), Quaternion.identity, transform);
         upgradeButton.GetComponent<UpgradeButton>().tower = gameObject;
         nameButton.GetComponent<NameToggler>().upgradeButton = Instantiate(upgradeButton, transform.position + new Vector3(8, -8), Quaternion.identity, transform);
