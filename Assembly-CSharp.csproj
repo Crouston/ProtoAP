@@ -54,9 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\AoE_Bullet.cs" />
+     <Compile Include="Assets\Script\AoE_BulletPrep.cs" />
      <Compile Include="Assets\Script\AoE_Tower.cs" />
      <Compile Include="Assets\Script\Bullet.cs" />
      <Compile Include="Assets\Script\ChoosingButton.cs" />
+     <Compile Include="Assets\Script\DemolishTower.cs" />
      <Compile Include="Assets\Script\Enemy.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\Land.cs" />

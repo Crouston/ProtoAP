@@ -17,9 +17,9 @@ public class AoE_Bullet : MonoBehaviour {
     {
         timer = 0;
         //enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
-        target = new Vector2(enemy.position.x, enemy.position.y);
+        //target = new Vector2(enemy.position.x, enemy.position.y);
         //speed = 10f;
-        transform.position = target;
+        //transform.position = target;
     }
 
     // Update is called once per frame

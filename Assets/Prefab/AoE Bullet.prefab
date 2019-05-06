@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  vanishTime: 3
+  vanishTime: 1
   damage: 2
 --- !u!212 &212606940614943930
 SpriteRenderer:

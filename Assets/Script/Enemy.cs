@@ -50,16 +50,15 @@ public class Enemy : MonoBehaviour {
         }
         if (collision.tag == "SlowBullet")
         {
-            health -= collision.GetComponent<AoE_Bullet>().damage;
+            health -= collision.GetComponent<AoE_BulletPrep>().damage;
             isHitSlow = true;
         }
         if (collision.tag == "AoEBullet")
         {
             health -= collision.GetComponent<AoE_Bullet>().damage;
-            health -= 1;
         }
-        
-        
+
+
     }
     private void OnTriggerExit2D(Collider2D collid)
     {

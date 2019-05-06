@@ -6,12 +6,15 @@ public class NameToggler : MonoBehaviour {
 
     public bool clicked;
 
-    public GameObject towerName, upgradeButton;
+    public GameObject towerName, upgradeButton, demolishButton;
 
     // Use this for initialization
     void Start () {
-        clicked = false;
-	}
+        clicked = true;
+        upgradeButton.SetActive(false);
+        demolishButton.SetActive(false);
+        towerName.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,15 +26,21 @@ public class NameToggler : MonoBehaviour {
         if (!clicked)
         {
             clicked = true;
-            if(upgradeButton != null)
+            if (upgradeButton != null || demolishButton != null)
+            {
                 upgradeButton.SetActive(false);
+                demolishButton.SetActive(false);
+            }
             towerName.SetActive(false);
         }
         else if (clicked)
         {
             clicked = false;
-            if (upgradeButton != null)
+            if (upgradeButton != null || demolishButton != null)
+            {
                 upgradeButton.SetActive(true);
+                demolishButton.SetActive(true);
+            }
             towerName.SetActive(true);
         }
     }
