@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour {
     private bool isHitSlow= false;
     private float timer;
 
-
+    [SerializeField]
+    private int dropMoney;
     public float health;
 
     // Array of waypoints to walk from one to the next one
@@ -21,10 +22,7 @@ public class Enemy : MonoBehaviour {
 	void Update () {
        // transform.Translate(Vector2.right * Time.deltaTime * speed);
         Move();
-        if(health <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        CheckDeath();
         if (isHitSlow == true)
         {
             moveSpeed = 5;
@@ -68,4 +66,12 @@ public class Enemy : MonoBehaviour {
         }
     }
    
+    private void CheckDeath()
+    {
+        if (health <= 0)
+        {
+            FindObjectOfType<GameManager>().money += dropMoney;
+            Destroy(this.gameObject);
+        }
+    }
 }
